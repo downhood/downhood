@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion E-Commerce - Timeless Elegance</title>
+    <meta name="description" content="Discover our curated collection of premium fashion pieces. Timeless elegance meets modern sophistication.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="fixed top-0 w-full z-50 py-4 px-6 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="logo-container">
+                <div class="cursor-pointer bg-white rounded-lg p-2 shadow-sm hover:shadow-md transition-shadow duration-300" onclick="scrollToSection('home')">
+                    <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8 nav-links">
+                <button onclick="scrollToSection('home')" class="hover:text-elegant-gold transition-colors duration-300">Home</button>
+                <button onclick="scrollToSection('products')" class="hover:text-elegant-gold transition-colors duration-300">Products</button>
+                <button onclick="scrollToSection('lifestyle')" class="hover:text-elegant-gold transition-colors duration-300">Lifestyle</button>
+                <button onclick="scrollToSection('accessories')" class="hover:text-elegant-gold transition-colors duration-300">Accessories</button>
+                <button onclick="scrollToSection('about')" class="hover:text-elegant-gold transition-colors duration-300">About</button>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-search w-5 h-5 hover:text-elegant-gold transition-colors duration-300 cursor-pointer"></i>
+                <i class="fas fa-heart w-5 h-5 hover:text-elegant-gold transition-colors duration-300 cursor-pointer"></i>
+                <i class="fas fa-shopping-bag w-5 h-5 hover:text-elegant-gold transition-colors duration-300 cursor-pointer"></i>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t mt-4 py-4 hidden">
+            <div class="flex flex-col space-y-4 px-6">
+                <button onclick="scrollToSection('home')" class="text-left hover:text-elegant-gold transition-colors duration-300">Home</button>
+                <button onclick="scrollToSection('products')" class="text-left hover:text-elegant-gold transition-colors duration-300">Products</button>
+                <button onclick="scrollToSection('lifestyle')" class="text-left hover:text-elegant-gold transition-colors duration-300">Lifestyle</button>
+                <button onclick="scrollToSection('accessories')" class="text-left hover:text-elegant-gold transition-colors duration-300">Accessories</button>
+                <button onclick="scrollToSection('about')" class="text-left hover:text-elegant-gold transition-colors duration-300">About</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-background"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">
+                    Timeless
+                    <span class="hero-subtitle">Elegance</span>
+                </h2>
+                <p class="hero-description">
+                    Discover our curated collection of premium fashion pieces
+                </p>
+                <button class="hero-button" onclick="scrollToSection('products')">
+                    Explore Collection
+                </button>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="py-20 px-6 bg-warm-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- New Arrivals -->
+            <div class="mb-16">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">New Arrivals</h2>
+                        <p class="section-subtitle">Fresh styles for the modern wardrobe</p>
+                    </div>
+                    <div class="scroll-controls">
+                        <button class="scroll-btn" onclick="scrollProducts('new-arrivals', 'left')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="scroll-btn" onclick="scrollProducts('new-arrivals', 'right')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="new-arrivals" class="product-scroll-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product1.jpg" alt="Silk Blouse">
+                            <div class="product-badge">NEW</div>
+                        </div>
+                        <h3 class="product-title">Silk Blouse</h3>
+                        <p class="product-subtitle">Premium silk collection</p>
+                        <p class="product-price">$248</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product2.jpg" alt="Designer Dress">
+                            <div class="product-badge">NEW</div>
+                        </div>
+                        <h3 class="product-title">Designer Dress</h3>
+                        <p class="product-subtitle">Exclusive collection</p>
+                        <p class="product-price">$389</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product3.jpg" alt="Tailored Suit">
+                            <div class="product-badge">NEW</div>
+                        </div>
+                        <h3 class="product-title">Tailored Suit</h3>
+                        <p class="product-subtitle">Power dressing</p>
+                        <p class="product-price">$495</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product4.jpg" alt="Cashmere Sweater">
+                            <div class="product-badge">NEW</div>
+                        </div>
+                        <h3 class="product-title">Cashmere Sweater</h3>
+                        <p class="product-subtitle">Luxury knitwear</p>
+                        <p class="product-price">$295</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product5.jpg" alt="Wool Coat">
+                            <div class="product-badge">NEW</div>
+                        </div>
+                        <h3 class="product-title">Wool Coat</h3>
+                        <p class="product-subtitle">Winter essentials</p>
+                        <p class="product-price">$425</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Sellers -->
+            <div class="mb-16">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">Best Sellers</h2>
+                        <p class="section-subtitle">Our most loved pieces</p>
+                    </div>
+                    <div class="scroll-controls">
+                        <button class="scroll-btn" onclick="scrollProducts('best-sellers', 'left')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="scroll-btn" onclick="scrollProducts('best-sellers', 'right')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="best-sellers" class="product-scroll-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product6.jpg" alt="Black Blazer">
+                        </div>
+                        <h3 class="product-title">Black Blazer</h3>
+                        <p class="product-subtitle">Classic wardrobe staple</p>
+                        <p class="product-price">$325</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product7.jpg" alt="Midi Skirt">
+                        </div>
+                        <h3 class="product-title">Midi Skirt</h3>
+                        <p class="product-subtitle">Versatile elegance</p>
+                        <p class="product-price">$185</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product8.jpg" alt="Linen Shirt">
+                        </div>
+                        <h3 class="product-title">Linen Shirt</h3>
+                        <p class="product-subtitle">Summer comfort</p>
+                        <p class="product-price">$145</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product9.jpg" alt="Pencil Dress">
+                        </div>
+                        <h3 class="product-title">Pencil Dress</h3>
+                        <p class="product-subtitle">Office chic</p>
+                        <p class="product-price">$275</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product10.jpg" alt="Trench Coat">
+                        </div>
+                        <h3 class="product-title">Trench Coat</h3>
+                        <p class="product-subtitle">Timeless classic</p>
+                        <p class="product-price">$495</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Limited Edition -->
+            <div class="mb-16">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">Limited Edition</h2>
+                        <p class="section-subtitle">Exclusive designer pieces</p>
+                    </div>
+                    <div class="scroll-controls">
+                        <button class="scroll-btn" onclick="scrollProducts('limited-edition', 'left')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="scroll-btn" onclick="scrollProducts('limited-edition', 'right')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="limited-edition" class="product-scroll-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product11.jpg" alt="Couture Gown">
+                            <div class="product-badge limited">LIMITED</div>
+                        </div>
+                        <h3 class="product-title">Couture Gown</h3>
+                        <p class="product-subtitle">Red carpet ready</p>
+                        <p class="product-price">$895</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product12.jpg" alt="Luxury Cardigan">
+                            <div class="product-badge limited">LIMITED</div>
+                        </div>
+                        <h3 class="product-title">Luxury Cardigan</h3>
+                        <p class="product-subtitle">Cashmere blend</p>
+                        <p class="product-price">$365</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product13.jpg" alt="Evening Dress">
+                            <div class="product-badge limited">LIMITED</div>
+                        </div>
+                        <h3 class="product-title">Evening Dress</h3>
+                        <p class="product-subtitle">Special occasions</p>
+                        <p class="product-price">$595</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product14.jpg" alt="Designer Blouse">
+                            <div class="product-badge limited">LIMITED</div>
+                        </div>
+                        <h3 class="product-title">Designer Blouse</h3>
+                        <p class="product-subtitle">Limited stock</p>
+                        <p class="product-price">$425</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product15.jpg" alt="Signature Jacket">
+                            <div class="product-badge limited">LIMITED</div>
+                        </div>
+                        <h3 class="product-title">Signature Jacket</h3>
+                        <p class="product-subtitle">Exclusive design</p>
+                        <p class="product-price">$695</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Section -->
+    <section id="lifestyle" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Lifestyle</h2>
+                <p class="section-subtitle">Fashion that fits your life</p>
+            </div>
+            
+            <div class="lifestyle-grid">
+                <div class="lifestyle-item">
+                    <div class="lifestyle-image">
+                        <img src="images/lifestyle1.jpg" alt="City Life">
+                        <div class="lifestyle-overlay">
+                            <h3 class="lifestyle-title">City Life</h3>
+                            <p class="lifestyle-subtitle">Where style meets sophistication</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lifestyle-item">
+                    <div class="lifestyle-image">
+                        <img src="images/lifestyle2.jpg" alt="Work & Play">
+                        <div class="lifestyle-overlay">
+                            <h3 class="lifestyle-title">Work & Play</h3>
+                            <p class="lifestyle-subtitle">Professional versatility</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lifestyle-item">
+                    <div class="lifestyle-image">
+                        <img src="images/lifestyle3.jpg" alt="Evening Elegance">
+                        <div class="lifestyle-overlay">
+                            <h3 class="lifestyle-title">Evening Elegance</h3>
+                            <p class="lifestyle-subtitle">Timeless sophistication</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lifestyle-item">
+                    <div class="lifestyle-image">
+                        <img src="images/lifestyle4.jpg" alt="Cultural Moments">
+                        <div class="lifestyle-overlay">
+                            <h3 class="lifestyle-title">Cultural Moments</h3>
+                            <p class="lifestyle-subtitle">Artistic expression</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" class="py-20 px-6 bg-warm-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Accessories</h2>
+                    <p class="section-subtitle">Complete your look with premium accessories</p>
+                </div>
+                <div class="scroll-controls">
+                    <button class="scroll-btn" onclick="scrollProducts('accessories-scroll', 'left')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="scroll-btn" onclick="scrollProducts('accessories-scroll', 'right')">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="accessories-scroll" class="product-scroll-container">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/accessory1.jpg" alt="Luxury Handbags">
+                    </div>
+                    <h3 class="product-title">Luxury Handbags</h3>
+                    <p class="product-subtitle">From $195</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/accessory2.jpg" alt="Fine Jewelry">
+                    </div>
+                    <h3 class="product-title">Fine Jewelry</h3>
+                    <p class="product-subtitle">From $89</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/accessory3.jpg" alt="Designer Eyewear">
+                    </div>
+                    <h3 class="product-title">Designer Eyewear</h3>
+                    <p class="product-subtitle">From $145</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/accessory4.jpg" alt="Silk Scarves">
+                    </div>
+                    <h3 class="product-title">Silk Scarves</h3>
+                    <p class="product-subtitle">From $75</p>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/accessory5.jpg" alt="Luxury Watches">
+                    </div>
+                    <h3 class="product-title">Luxury Watches</h3>
+                    <p class="product-subtitle">From $295</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 px-6 bg-charcoal text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="section-title text-white">Stay in Style</h2>
+            <p class="section-subtitle text-white opacity-90 mb-8">
+                Subscribe to our newsletter for exclusive offers and style inspiration
+            </p>
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="bg-charcoal text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Logo" class="h-12 w-auto">
+                    </div>
+                    <p class="footer-description">
+                        Redefining fashion with timeless elegance and modern sophistication.
+                    </p>
+                    <div class="social-links">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-pinterest"></i>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fashion E-Commerce. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <h4 class="toast-title">Thank you for subscribing!</h4>
+            <p class="toast-message">You'll receive our latest updates and exclusive offers.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
